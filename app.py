@@ -1,6 +1,12 @@
 from flask import Flask, jsonify, request
 from flask_restful import Api, Resource
 from flasgger import Swagger
+from dotenv import load_dotenv
+import os
+
+load_dotenv("misc.env")
+
+AIRTABLE_KEY = os.getenv("AIRTABLE_KEY")
 
 import show_review
 
